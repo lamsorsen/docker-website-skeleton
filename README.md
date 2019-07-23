@@ -1,5 +1,8 @@
 # docker-website-skeleton
 Forkable website created with Docker, Flask, React (create-react-app), and Nginx.
+## Creating 
+
+
 ## Developing
 1. On a Linux or Mac with [Docker](https://docs.docker.com/v17.12/install/) and [docker-compose](https://docs.docker.com/compose/install/) installed, clone down this repo. 
 1. `cd devcon-docker-website`
