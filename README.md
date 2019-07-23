@@ -87,4 +87,6 @@ increment the second number and zero out the last number (so 1.0.1 would become 
 increment the first number and zero out the other two (so 1.1.0 would become 2.0.0).
 
 ## Getting a Domain Name
+You don't want to have to reach your website at an IP all the time. Here's how you can get a domain name and attach
+it to your droplet.
 TODO
