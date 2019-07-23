@@ -4,7 +4,7 @@ Forkable website created with Docker, Flask, React (create-react-app), and Nginx
 In order to create a website from scratch you need to 1. aquire a **host**, 2. run a **web application** on that host, and 3. get a **domain name** that directs to your host. 
 There are many different ways to stand up websites and most of them handle one or all of those three steps for you. 
 Through the steps listed below I outline a way to do all those steps yourself as painlessly as possible.
-This way, you will have almost total control over your website.
+This way you will have almost total control over your website.
 
 We'll use DigitalOcean for hosting, this project (docker-website-skeleton) as a basis for the web app, and namecheap for the domain name. Hosting and Domain names aren't free so have a credit card handy. However, this doesn't need to be expensive. Our shopping list will cost ~$10 all told.
 
