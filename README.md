@@ -62,7 +62,8 @@ Run `docker swarm init --advertise-addr XXX.XXX.XXX.XXX` where `XXX.XXX.XXX.XXX`
 ![image](https://user-images.githubusercontent.com/33299806/61745953-3fc74380-ad60-11e9-955d-7811dd030b06.png)
 1. Let's also set up authentication to github. Run `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` and repeatedly press enter. Then `cat ~/.ssh/id_rsa.pub` and copy that result into a [new ssh key on github](https://github.com/settings/keys). This way you can push and pull from github freely while on your droplet!
 
-There quite a few other little quality-of-life things to do on your linux node, but I'll leave those for a different guide.
+There quite a few other little quality-of-life things to do on your linux node, but above are the essentials.
+See [this guide](/QualityOfLife.md) for instructions on how to set up your environment like I do mine.
 
 ## Running a Dev Instance Of Your Website
 1. [Create a fork of docker-website-skeleton (this repo) on github](https://help.github.com/en/articles/fork-a-repo).
