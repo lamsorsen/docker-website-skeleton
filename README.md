@@ -1,7 +1,7 @@
 # docker-website-skeleton
 Forkable website created with Docker, Flask, React (create-react-app), and Nginx.
 # Creating a website from scratch
-In order to create a website from scratch you need to 1. aquire a **host**, 2. **run a web application on that host**, and 3. get a **domain name** that directs to your host. 
+In order to create a website from scratch you need to 1. aquire a **host**, 2. run a **web application** on that host, and 3. get a **domain name** that directs to your host. 
 There are many different ways to stand up websites and most of them handle one or all of those three steps for you. 
 Through the steps listed below I outline a way to do all those steps yourself as painlessly as possible.
 This way, you will have almost total control over your website.
