@@ -1,8 +1,13 @@
 # docker-website-skeleton
 Forkable website created with Docker, Flask, React (create-react-app), and Nginx.
 # Creating a website from scratch
-In order to have create a website from scratch, you need to aquire a **host**, you need **to run your web application on that host**, and you need a **domain name** that directs to your host. Below lists all the steps to go about doing all of those things.
-We'll use DigitalOcean for hosting, this project as a basis for the web app, and namecheap for the domain name. Our shopping list will cost ~$10, so have a credit card handy.
+In order to create a website from scratch you need to 1. aquire a **host**, 2. **run a web application on that host**, and 3. get a **domain name** that directs to your host. 
+There are many different ways to stand up websites and most of them handle one or all of those three steps for you. 
+Through the steps listed below I outline a way to do all those steps yourself as painlessly as possible.
+This way, you will have almost total control over your website.
+
+We'll use DigitalOcean for hosting, this project (docker-website-skeleton) as a basis for the web app, and namecheap for the domain name. Hosting and Domain names aren't free so have a credit card handy. However, this doesn't need to be expensive. Our shopping list will cost ~$10 all told.
+
 ## Local Preparations
 These instructions are Windows-specific. If you're on Linux or Mac then you will do things slightly differently.
 1. Install [git bash](https://gitforwindows.org/). Make sure you can open a git bash window.
