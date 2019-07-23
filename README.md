@@ -115,4 +115,7 @@ it to your droplet.
 ![image](https://user-images.githubusercontent.com/33299806/61748323-8b302080-ad65-11e9-8b17-b7ae4cf8cd23.png)
 1. Once that's successful, click the three dots next to your droplet and click "Add a Domain" again. This time, add
 your domain *without* the www. prefix.
+1. Now all that's left to do is wait! It takes 30 minutes to a few hours for the changes on Namecheap's end to propagate.
+When you come back later you should be able to visit your domain and see your website!
+
 
