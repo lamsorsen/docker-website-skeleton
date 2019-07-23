@@ -60,7 +60,7 @@ Run `docker swarm init --advertise-addr XXX.XXX.XXX.XXX` where `XXX.XXX.XXX.XXX`
 There quite a few other little quality-of-life things to do on your linux node, but I'll leave those for a different guide.
 
 ## Running a Dev Instance Of Your Website
-1. [Create a fork of docker-website-skeleton repo on github](https://help.github.com/en/articles/fork-a-repo).
+1. [Create a fork of docker-website-skeleton (this repo) on github](https://help.github.com/en/articles/fork-a-repo).
 1. On your fork, copy the ssh clone uri.             
 ![image](https://user-images.githubusercontent.com/33299806/61742668-40a8a700-ad59-11e9-8424-23e579f3df07.png)
 1. Clone your fork onto your node using that uri:
@@ -78,6 +78,8 @@ These commands are based on https://docs.docker.com/engine/swarm/stack-deploy/
 1. `WEBSITE_VERSION=1.0.0 docker-compose -f docker-compose.prod.yml build`
 1. `WEBSITE_VERSION=1.0.0 docker-compose -f docker-compose.prod.yml push`
 1. `WEBSITE_VERSION=1.0.0 docker stack deploy -c docker-compose.prod.yml my-website`
+1. Watch your website get replicated by typing `docker service ls`.
+![image](https://user-images.githubusercontent.com/33299806/61744927-0b528800-ad5e-11e9-8e0d-aea9be05ebbf.png)
 1. Visit your website by just typing your IP into your browser. Your browser connects to port 80 by default!
 ![image](https://user-images.githubusercontent.com/33299806/61744301-96328300-ad5c-11e9-9d30-aceb015af238.png)
 
