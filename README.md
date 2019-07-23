@@ -59,7 +59,7 @@ If all goes well your node should greet you like this:
 Run `docker swarm init --advertise-addr XXX.XXX.XXX.XXX` where `XXX.XXX.XXX.XXX` is the IP address you used to connect to this node.
 ![image](https://user-images.githubusercontent.com/33299806/61742297-6a150300-ad58-11e9-812a-fc8a5e525abb.png)
 1. It'll also be nice to have a docker registry running on your swarm. You can do that by running `docker service create --name registry --publish published=5000,target=5000 registry:2`
-![image](https://user-images.githubusercontent.com/33299806/61742369-93ce2a00-ad58-11e9-8a4a-bba6f6f7f58e.png)
+![image](https://user-images.githubusercontent.com/33299806/61745953-3fc74380-ad60-11e9-955d-7811dd030b06.png)
 1. Let's also set up authentication to github. Run `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` and repeatedly press enter. Then `cat ~/.ssh/id_rsa.pub` and copy that result into a [new ssh key on github](https://github.com/settings/keys). This way you can push and pull from github freely while on your droplet!
 
 There quite a few other little quality-of-life things to do on your linux node, but I'll leave those for a different guide.
