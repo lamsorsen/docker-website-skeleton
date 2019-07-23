@@ -59,21 +59,32 @@ Run `docker swarm init --advertise-addr XXX.XXX.XXX.XXX` where `XXX.XXX.XXX.XXX`
 
 There quite a few other little quality-of-life things to do on your linux node, but I'll leave those for a different guide.
 
-## Creating your website
+## Running a Dev Instance Of Your Website
 1. [Create a fork of docker-website-skeleton repo on github](https://help.github.com/en/articles/fork-a-repo).
 1. On your fork, copy the ssh clone uri.             
 ![image](https://user-images.githubusercontent.com/33299806/61742668-40a8a700-ad59-11e9-8424-23e579f3df07.png)
 1. Clone your fork onto your node using that uri:
 ![image](https://user-images.githubusercontent.com/33299806/61743071-199ea500-ad5a-11e9-8b89-31b9e5752c30.png)
 1. `cd` into your repo.
-1. `docker-compose up --build`
-1. Visit your website at `localhost:3001` in your browser.
+1. `docker-compose up --build`. This could take a while the first time, but on subsequent runs it should be decently fast.
+1. Visit your website at `IP:3000` in your web browser. So for me I went to 159.203.66.137:3000.
+![image](https://user-images.githubusercontent.com/33299806/61743746-85354200-ad5b-11e9-9eac-e2b8753d345a.png)
 1. Make any changes you wish to the frontend or API and see the changes reflected live. The only time you should need to rebuild is when you add new dependencies or change Docker or docker-compose configuration.
 
-## Deploying Your Website
-1. While it's 
-1. `docker-compose -f docker-compose.prod.yml build`
-1. `docker-compose -f docker-compose.prod.yml push`
-1. `docker stack deploy -c docker-compose.prod.yml my-website`
+## Deploying A Stable Instance Of Your Website
+Your dev instance from the previous section is nice but to create an "official" instance of your
+project follow these steps. This instance will run in the background, will run on port 80, and will stay up indefinitely. 
+These commands are based on https://docs.docker.com/engine/swarm/stack-deploy/
+1. `WEBSITE_VERSION=1.0.0 docker-compose -f docker-compose.prod.yml build`
+1. `WEBSITE_VERSION=1.0.0 docker-compose -f docker-compose.prod.yml push`
+1. `WEBSITE_VERSION=1.0.0 docker stack deploy -c docker-compose.prod.yml my-website`
+1. Visit your website by just typing your IP into your browser. Your browser connects to port 80 by default!
+![image](https://user-images.githubusercontent.com/33299806/61744301-96328300-ad5c-11e9-9d30-aceb015af238.png)
 
-Whenever you want to update the "production" version of your website 
+Whenever you want to update the "production" version of your website, you can run the above commands again, but with a new WEBSITE_VERSION.
+When you fix a bug, increment the third number in the WEBSITE_VERSION (so 1.0.0 would become 1.0.1) and when you add new features
+increment the second number and zero out the last number (so 1.0.1 would become 1.1.0). When you make a major overhaul,
+increment the first number and zero out the other two (so 1.1.0 would become 2.0.0).
+
+## Getting a Domain Name
+TODO
