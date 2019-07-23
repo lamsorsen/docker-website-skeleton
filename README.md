@@ -81,10 +81,11 @@ These commands are based on https://docs.docker.com/engine/swarm/stack-deploy/
 1. Visit your website by just typing your IP into your browser. Your browser connects to port 80 by default!
 ![image](https://user-images.githubusercontent.com/33299806/61744301-96328300-ad5c-11e9-9d30-aceb015af238.png)
 
-Whenever you want to update the "production" version of your website, you can run the above commands again, but with a new WEBSITE_VERSION.
-When you fix a bug, increment the third number in the WEBSITE_VERSION (so 1.0.0 would become 1.0.1) and when you add new features
-increment the second number and zero out the last number (so 1.0.1 would become 1.1.0). When you make a major overhaul,
-increment the first number and zero out the other two (so 1.1.0 would become 2.0.0).
+Whenever you want to update the "production" version of your website you can run the above commands again but with a new WEBSITE_VERSION.
+
+When you fix a bug, increment the third number in the WEBSITE_VERSION (so 1.0.0 would become 1.0.1). 
+When you add new features increment the second number and zero out the last number (so 1.0.1 would become 1.1.0). 
+When you make a major overhaul increment the first number and zero out the other two (so 1.1.0 would become 2.0.0).
 
 ## Getting a Domain Name
 You don't want to have to reach your website at an IP all the time. Here's how you can get a domain name and attach
