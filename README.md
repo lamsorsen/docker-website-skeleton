@@ -97,4 +97,22 @@ When you make a major overhaul increment the first number and zero out the other
 ## Getting a Domain Name
 You don't want to have to reach your website at an IP all the time. Here's how you can get a domain name and attach
 it to your droplet.
-TODO
+1. Visit namecheap.com
+1. Search for the domain name you want. You can't go wrong by claiming your name. I've already claimed lamsorsen.com, so in this example I'll claim lamsorsen.xyz. The suffix (.com, .net, .xyz, .pizza, etc) shouldn't matter for these purposes so choose something fun and cheap!
+![image](https://user-images.githubusercontent.com/33299806/61747091-c3822f80-ad62-11e9-9dd9-4f85c9c7e364.png)
+1. Check out. You can keep any default config (whois guard, etc).
+1. Once you've paid, click the "Manage" button next to your domain on the "Thank you for your purchase" page.
+![image](https://user-images.githubusercontent.com/33299806/61747581-caf60880-ad63-11e9-8f3d-9783ae45a1f0.png)
+1. On the next page, click "Manage" again.
+![image](https://user-images.githubusercontent.com/33299806/61747710-14465800-ad64-11e9-8d0c-aac1bce6e51c.png)
+1. On this page delete the redirect domain by clicking the trash can. Under "Nameservers" select "Custom DNS" and put `ns1.digitalocean.com`, `ns2.digitalocean.com`, and `ns3.digitalocean.com` as the nameservers.
+![image](https://user-images.githubusercontent.com/33299806/61747840-6a1b0000-ad64-11e9-9966-4e91b3cb51d4.png)
+1. Also, scroll down and under "Other Domain Settings" turn off the parking page.
+![image](https://user-images.githubusercontent.com/33299806/61747974-bfefa800-ad64-11e9-91a7-baa4cd7bf5d1.png)
+1. Alright, now go back to DigitalOcean. Click the three dots next to your droplet and click "Add a Domain".
+![image](https://user-images.githubusercontent.com/33299806/61748183-47d5b200-ad65-11e9-86ce-cf0f2f046bad.png)
+1. Add your www. your domain as a domain.
+![image](https://user-images.githubusercontent.com/33299806/61748323-8b302080-ad65-11e9-8b17-b7ae4cf8cd23.png)
+1. Once that's successful, click the three dots next to your droplet and click "Add a Domain" again. This time, add
+your domain *without* the www. prefix.
+
