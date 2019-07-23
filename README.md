@@ -114,7 +114,8 @@ it to your droplet.
 1. Add your www. your domain as a domain.
 ![image](https://user-images.githubusercontent.com/33299806/61748323-8b302080-ad65-11e9-8b17-b7ae4cf8cd23.png)
 1. Once that's successful, click the three dots next to your droplet and click "Add a Domain" again. This time, add
-your domain *without* the www. prefix.
+your domain *without* the www. prefix. Here's what your main DigitalOcean page should look like when you're done:
+![image](https://user-images.githubusercontent.com/33299806/61748871-f6c6bd80-ad66-11e9-91a8-c58ead6acbba.png)
 1. Now all that's left to do is wait! It takes 30 minutes to a few hours for the changes on Namecheap's end to propagate.
 When you come back later you should be able to visit your domain and see your website!
 
