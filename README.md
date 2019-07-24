@@ -106,7 +106,7 @@ it to your droplet.
 ![image](https://user-images.githubusercontent.com/33299806/61747581-caf60880-ad63-11e9-8f3d-9783ae45a1f0.png)
 1. On the next page, click "Manage" again.
 ![image](https://user-images.githubusercontent.com/33299806/61747710-14465800-ad64-11e9-8d0c-aac1bce6e51c.png)
-1. On this page delete the redirect domain by clicking the trash can. Under "Nameservers" select "Custom DNS" and put `ns1.digitalocean.com`, `ns2.digitalocean.com`, and `ns3.digitalocean.com` as the nameservers.
+1. On this page delete the redirect domain by clicking the trash can. Under "Nameservers" select "Custom DNS" and put `ns1.digitalocean.com`, `ns2.digitalocean.com`, and `ns3.digitalocean.com` as the nameservers. **Be sure to hit the little green checkmark when you're done**.
 ![image](https://user-images.githubusercontent.com/33299806/61747840-6a1b0000-ad64-11e9-9966-4e91b3cb51d4.png)
 1. Also, scroll down and under "Other Domain Settings" turn off the parking page.
 ![image](https://user-images.githubusercontent.com/33299806/61747974-bfefa800-ad64-11e9-91a7-baa4cd7bf5d1.png)
