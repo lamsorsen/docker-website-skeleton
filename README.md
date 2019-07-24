@@ -21,7 +21,7 @@ accepting the defaults. Do not enter a password, just press enter.
 ## Buying a Host
 You can host a website on any computer, but generally you don't want your website to go down every time you turn off your machine.
 It's going to be better to rent a host that never needs to go down (usually a virtual machine) from a hosting service. I like DigitalOcean
-for this, as you can buy a suitable host for them for $5 a month and they don't put any barriers between you and your host. 
+for this, as you can buy a suitable host from them for $5 a month and they don't put any barriers between you and your host. 
 Once you have it set up this little machine will be a great place to test any apps you create.
 1. Go to [DigitalOcean's website](https://www.digitalocean.com/) and start creating your account.
 1. Once you get to the page where you provide your project details, be sure that you select "Docker" under the "tools and technologies that you plan to use on DigitalOcean." Other than that, everything is up to you.
