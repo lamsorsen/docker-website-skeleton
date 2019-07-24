@@ -119,5 +119,5 @@ your domain *without* the www. prefix. Here's what your main DigitalOcean page s
 ![image](https://user-images.githubusercontent.com/33299806/61748871-f6c6bd80-ad66-11e9-91a8-c58ead6acbba.png)
 1. Now all that's left to do is wait! It takes 30 minutes to a few hours for the changes on Namecheap's end to propagate.
 When you come back later you should be able to visit your domain and see your website!
-
+![image](https://user-images.githubusercontent.com/33299806/61804951-7fdb0480-adfa-11e9-8987-eb528c091b44.png)
 
