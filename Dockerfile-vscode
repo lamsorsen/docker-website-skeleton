@@ -1,0 +1,41 @@
+FROM codercom/code-server
+
+# The base image tries to make you run as a different user within
+# the container.
+# I'd rather just run as root.
+USER root
+
+RUN apt-get update
+# Install node.js
+RUN apt-get install -y curl git
+RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+RUN apt-get install -y nodejs
+
+# Install yarn
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+RUN apt-get update && apt-get install yarn
+
+# Install python dependencies
+RUN apt install -y python3-pip python-dev python-distribute python-pip
+COPY ./api/requirements.txt ./api/requirements.txt
+RUN pip3 install -r api/requirements.txt
+
+# Install vscode extensions
+# I couldn't find a way to install all the extensions at once so we do it
+# one at a time.
+COPY ./.vscode-extensions /tmp
+RUN code-server --install-extension /tmp/dbaeumer.vscode-eslint-1.9.0.vsix
+RUN code-server --install-extension /tmp/esbenp.prettier-vscode-1.9.0.vsix
+RUN code-server --install-extension /tmp/ms-python.python-2019.6.24221.vsix
+
+# docker
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+        docker.io \
+        docker-compose
+
+# Without this the compose logs will stop after 60 seconds of inactivity.
+ENV COMPOSE_HTTP_TIMEOUT 100000
+
+

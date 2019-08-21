@@ -5,9 +5,16 @@ services:
     ports:
       - '3000:3000'
   frontend:
-    build: ./frontend
+    build: 
+      context: ./frontend
+      args:
+        ENVIRONMENT: DEVELOPMENT
+    # If your browser doesn't automatically refresh when you make
+    # frontend changes, change $HOSTNAME to your app's domain name
+    # (ex: "myapp.com") or your node's IP address.
+    command: ["yarn", "start", "--public", $HOSTNAME] 
     volumes:
-      - './frontend/src:/frontend/src'
+      - './frontend/app:/frontend/app'
   api:
     build: ./api
     volumes:
@@ -15,4 +22,16 @@ services:
     environment:
       FLASK_ENV: development
       FLASK_DEBUG: 1
+  vscode:
+    command: --allow-http
+    build:
+      context: .
+      dockerfile: Dockerfile-vscode
+    volumes:
+      - '~/.ssh:/root/.ssh' # For git, but not a very secure thing to do
+      - '~/.gitconfig:/root/.gitconfig' # Also for git
+      - '.:/home/coder/project' # Make your project in the IDE container 1-1 with what's on the host
+      - '/var/run/docker.sock:/var/run/docker.sock' # For running docker inside vscode
+    ports:
+      - "8443:8443"
 

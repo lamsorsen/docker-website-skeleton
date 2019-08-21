@@ -1,6 +1,7 @@
 FROM python:3.7-alpine
 
-RUN pip3 install flask
+COPY requirements.txt /tmp
+RUN pip3 install -r /tmp/requirements.txt
 ENV FLASK_APP /app/app.py
 
 COPY /app.py /app/app.py
