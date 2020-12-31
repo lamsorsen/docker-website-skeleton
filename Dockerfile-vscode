@@ -1,4 +1,4 @@
-FROM codercom/code-server
+FROM codercom/code-server:1.939
 
 # The base image tries to make you run as a different user within
 # the container.
